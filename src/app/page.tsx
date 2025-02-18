@@ -74,9 +74,7 @@ export default function Home() {
 
                         <Button.Root type="submit">
                             Confirmar
-                            <Button.Icon>
-                                <ArrowRight />
-                            </Button.Icon>
+                            <ArrowRight />
                         </Button.Root>
                     </form>
                 </div>
