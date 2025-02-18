@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.svg"
-import Button from "@/components/button"
+import { Button } from "@/components/button"
 import { Input } from "@/components/input"
 import { ArrowRight, Mail, Radio, User } from "lucide-react"
 import Image from "next/image"
@@ -72,10 +72,12 @@ export default function Home() {
                             </Input.Root>
                         </div>
 
-                        <Button type="submit">
+                        <Button.Root type="submit">
                             Confirmar
-                            <ArrowRight />
-                        </Button>
+                            <Button.Icon>
+                                <ArrowRight />
+                            </Button.Icon>
+                        </Button.Root>
                     </form>
                 </div>
             </div>
