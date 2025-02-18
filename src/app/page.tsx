@@ -1,6 +1,6 @@
 import logo from "@/assets/logo.svg"
 import Button from "@/components/button"
-import { InputField, InputIcon, InputRoot } from "@/components/input"
+import { Input } from "@/components/input"
 import { ArrowRight, Mail, Radio, User } from "lucide-react"
 import Image from "next/image"
 
@@ -54,22 +54,22 @@ export default function Home() {
                         </h2>
 
                         <div className="space-y-3">
-                            <InputRoot>
-                                <InputIcon>
+                            <Input.Root>
+                                <Input.Icon>
                                     <User />
-                                </InputIcon>
-                                <InputField
+                                </Input.Icon>
+                                <Input.Field
                                     type="text"
                                     placeholder="Nome completo"
                                 />
-                            </InputRoot>
+                            </Input.Root>
 
-                            <InputRoot>
-                                <InputIcon>
+                            <Input.Root>
+                                <Input.Icon>
                                     <Mail />
-                                </InputIcon>
-                                <InputField type="mail" placeholder="E-mail" />
-                            </InputRoot>
+                                </Input.Icon>
+                                <Input.Field type="mail" placeholder="E-mail" />
+                            </Input.Root>
                         </div>
 
                         <Button type="submit">
