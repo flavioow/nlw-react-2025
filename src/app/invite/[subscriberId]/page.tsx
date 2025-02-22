@@ -4,8 +4,16 @@ import { Ranking } from "./ranking"
 import { Stats } from "./stats"
 import { InviteForm } from "./invite-form"
 
-export default function Invite() {
-    const inviteLink = "devstage.com/codecraft-summit-2025/1289"
+interface InvitePageProps {
+    params: Promise<{
+        subscriberId: string
+    }>
+}
+
+export default async function InvitePage(props: InvitePageProps) {
+    const { subscriberId } = await props.params
+
+    const inviteLink = `http://localhost:3333/invites/${subscriberId}`
 
     return (
         <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
@@ -25,7 +33,7 @@ export default function Invite() {
 
                     <InviteForm inviteLink={inviteLink} />
 
-                    <Stats />
+                    <Stats subscriberId={subscriberId} />
                 </div>
             </div>
 
